@@ -3,41 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    
+
     <!--====== Title ======-->
     <title>SOXBOX - Ta boite à chaussettes</title>
-    
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
-        
+
     <!--====== Magnific Popup CSS ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        
+
     <!--====== Slick CSS ======-->
     <link rel="stylesheet" href="assets/css/slick.css">
-        
+
     <!--====== Line Icons CSS ======-->
     <link rel="stylesheet" href="assets/css/LineIcons.css">
-        
+
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
+
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
-    
+
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_e0I4vqa3x4lf9XLck6Mfb');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // these IDs from the previous steps
+                emailjs.sendForm('service_gwd6tqz', 'template_f7sv712', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        document.getElementById("name").value = "";
+                        document.getElementById("email").value = "";
+                        document.getElementById("massage").value = "";
+                        window.alert("Votre message a bien été envoyé")
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-   
+
     <!--====== PRELOADER PART START ======-->
 
     <div class="preloader">
@@ -58,7 +86,7 @@
     </div>
 
     <!--====== PRELOADER PART ENDS ======-->
-    
+
     <!--====== NAVBAR TWO PART START ======-->
 
     <section class="navbar-area">
@@ -66,12 +94,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                       
+
                         <a class="navbar-brand" href="#">
                             <img src="assets/images/logo.png" alt="Logo">
                         </a>
-                        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo" aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo"
+                            aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
@@ -86,7 +115,7 @@
                                 <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
                             </ul>
                         </div>
-                        
+
                         <div class="navbar-btn d-none d-sm-inline-block">
                             <ul>
                                 <li><a class="solid" href="#pricing">S'abonner</a></li>
@@ -99,15 +128,22 @@
     </section>
 
     <!--====== NAVBAR TWO PART ENDS ======-->
-    
+
     <!--====== SLIDER PART START ======-->
 
     <section id="home" class="slider_area">
-        
+        <div class="placement">
+        <div class="opa">
+            <h2 class="premiere-phrase"> SOXBOX, c'est une paire de chaussettes surprise tous les mois, <br>
+                sooooooooooooooooo soxy ! 
+            </h2>
+        </div>
+        </div>
+
     </section>
 
     <!--====== SLIDER PART ENDS ======-->
-    
+
     <!--====== FEATRES TWO PART START ======-->
 
     <section id="services" class="features-area">
@@ -117,17 +153,22 @@
                     <div class="section-title text-center pb-10">
                         <h3 class="title">Notre concept</h3>
                         <p class="text">Soxbox fringue vos pieds avec goût !<br> <br>
-                            Notre idée est très simple : recevoir chez soi tous les mois une paire de chaussettes à motifs tendance et décalée 😊<br> <br>
-                            Nos chaussettes sont unisexe, de taille unique, et composées principalement de coton peigné <br>( elle est pas belle, la chaussette ?). <br> <br>
-                            En plus, la livraison est gratuite et la box est 100% kraft ( eh oui on pense aussi à la planète 😛 ). <br> <br>
-                            
-                            Bref, le style jusqu’au bout des orteils 😉</p>
-                    </div> 
-        </div> <!-- container -->
+                            Notre idée est très simple : recevoir chez soi tous les mois une paire de chaussettes à
+                            motifs tendance et décalés 😊<br> <br>
+                            Nos chaussettes sont unisexe, de taille unique, et composées principalement de coton peigné
+                            <br>( elle est pas belle, la chaussette ?). <br> <br>
+                            En plus, la livraison est gratuite et la box est 100% kraft ( eh oui on pense aussi à la
+                            planète 😛 ). <br> <br>
+
+                            Bref, le style jusqu’au bout des orteils 😉 <br> <br>
+                            Soxez votre style !
+                        </p>
+                    </div>
+                </div> <!-- container -->
     </section>
 
     <!--====== FEATRES TWO PART ENDS ======-->
-    
+
 
     <!--====== PRINICNG START ======-->
 
@@ -155,19 +196,20 @@
                             <ul>
                                 <li><i class="lni lni-check-mark-circle"></i> Livraison gratuite</li>
                                 <li><i class="lni lni-check-mark-circle"></i> Payement 100% sécurisé</li>
-                                <li><i class="lni lni-check-mark-circle"></i> Sans engagement</li>
-                                
+                                <li><i class="lni lni-check-mark-circle"></i> Prélevement tous les mois</li>
+
                             </ul>
                         </div>
                         <div class="pricing-btn rounded-buttons text-center">
                             <div class="pricing-btn rounded-buttons text-center">
-                                <a class="main-btn rounded-one" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NL9HCVCWRCDGE">S'abonner</a>
+                                <a class="main-btn rounded-one"
+                                    href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NL9HCVCWRCDGE">S'abonner</a>
                             </div>
-                                
-                        </div>    
+
+                        </div>
                     </div> <!-- pricing style one -->
                 </div>
-                
+
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="pricing-style3 mt-30">
                         <div class="pricing-icon text-center">
@@ -181,15 +223,17 @@
                             <ul>
                                 <li><i class="lni lni-check-mark-circle"></i> Livraison gratuite</li>
                                 <li><i class="lni lni-check-mark-circle"></i> Payement 100% sécurisé</li>
-                                <li><i class="lni lni-check-mark-circle"></i> Sans engagement</li>
+                                <li><i class="lni lni-check-mark-circle"></i> Prélevement tous les 3 mois</li>
+
                             </ul>
                         </div>
                         <div class="pricing-btn rounded-buttons text-center">
-                            <a class="main-btn rounded-one" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=48ABCXRLURR44">S'abonner</a>
+                            <a class="main-btn rounded-one"
+                                href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=48ABCXRLURR44">S'abonner</a>
                         </div>
                     </div> <!-- pricing style one -->
                 </div>
-                
+
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="pricing-style1 mt-30">
                         <div class="pricing-icon text-center">
@@ -203,11 +247,12 @@
                             <ul>
                                 <li><i class="lni lni-check-mark-circle"></i> Livraison gratuite</li>
                                 <li><i class="lni lni-check-mark-circle"></i> Payement 100% sécurisé</li>
-                                <li><i class="lni lni-check-mark-circle"></i> Sans engagement</li>
+                                <li><i class="lni lni-check-mark-circle"></i> Prélevement tous les ans</li>
                             </ul>
                         </div>
                         <div class="pricing-btn rounded-buttons text-center">
-                            <a class="main-btn rounded-one" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8KJ9M5XUDP95N">S'abonner</a>
+                            <a class="main-btn rounded-one"
+                                href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8KJ9M5XUDP95N">S'abonner</a>
                         </div>
                     </div> <!-- pricing style one -->
                 </div>
@@ -216,7 +261,7 @@
     </section>
 
     <!--====== PRINICNG ENDS ======-->
-    
+
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about-area">
@@ -231,55 +276,77 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
-                                        <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Puis-je me désabonner quand je veux ?</a>
+                                        <a href="#" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">Puis-je me désabonner quand
+                                            je veux ?</a>
                                     </div>
 
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p class="text">Oui, nos offres sont sans engagement, il suffit de cliquer sur le bouton "se désabonner"tout en bas de la page et de suivre les instructions sur paypal.</p>
+                                            <p class="text">Oui, nos offres sont sans engagement, il suffit de cliquer
+                                                sur le bouton "se désabonner"tout en bas de la page et de suivre les
+                                                instructions sur paypal.</p>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div> <!-- card -->
                                 <div class="card">
                                     <div class="card-header" id="headingTwo">
-                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Dois-je payer des frais de livraison ?</a>
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">Dois-je payer des frais de
+                                            livraison ?</a>
                                     </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p class="text">Non, la livraison est offerte sur tout nos produits.</p>
+                                            <p class="text">Non, la livraison est offerte sur tous nos produits.</p>
                                         </div>
                                     </div>
                                 </div> <!-- card -->
                                 <div class="card">
                                     <div class="card-header" id="headingThree">
-                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">A quelle taille de pied les chaussettes correspondent ?</a>
+                                        <a href="#" class="collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">A quelle taille de pied les chaussettes
+                                            correspondent ?</a>
                                     </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p class="text">Nos chaussettes sont unisex et de taille unique convenant à des pied de taille 36 à 45.</p>
+                                            <p class="text">Nos chaussettes sont unisexe et de taille unique convenant à
+                                                des pieds de taille 36 à 45.</p>
                                         </div>
                                     </div>
                                 </div> <!-- card -->
                                 <div class="card">
                                     <div class="card-header" id="headingFore">
-                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">Quand vais-je recevoir ma SOXBOX ?</a>
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFore"
+                                            aria-expanded="false" aria-controls="collapseFore">Quand vais-je recevoir ma
+                                            SOXBOX ?</a>
                                     </div>
-                                    <div id="collapseFore" class="collapse" aria-labelledby="headingFore" data-parent="#accordionExample">
+                                    <div id="collapseFore" class="collapse" aria-labelledby="headingFore"
+                                        data-parent="#accordionExample">
                                         <div class="card-body">
-                                            <p class="text">Nous envoyons nos SOXBOX à nos abonné à la fin de chaque mois.
+                                            <p class="text">Nous envoyons nos SOXBOX à nos abonnés à la fin de chaque
+                                                mois.
                                             </p>
                                         </div>
                                     </div>
                                 </div> <!-- card -->
                                 <div class="card">
                                     <div class="card-header" id="headingFive">
-                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">En quoi sont faites vos chaussettes ?</a>
+                                        <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">En quoi sont faites vos
+                                            chaussettes ?</a>
                                     </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                        data-parent="#accordionExample">
                                         <div class="card-body">
                                             <p class="text">Nos chaussettes sont composé à : <br> <br>
-                                                80% Coton peigné, nous privilégions les matières naturelles pour être plus respectueux de votre peau et de l'environnement. <br> <br>
-                                                19% Polyamide, nous utilisons cette fibre pour permettre à tout le monde de pouvoir porter nos paires de chaussettes ! <br> <br>
+                                                80% Coton peigné, nous privilégions les matières naturelles pour être
+                                                plus respectueux de votre peau et de l'environnement. <br> <br>
+                                                19% Polyamide, nous utilisons cette fibre pour permettre à tout le monde
+                                                de pouvoir porter nos paires de chaussettes ! <br> <br>
                                                 1% Élasthane, indispensable pour des chaussettes qui ne serrent pas.</p>
                                         </div>
                                     </div>
@@ -298,68 +365,69 @@
     </section>
 
     <!--====== ABOUT PART ENDS ======-->
-        <!--====== CONTACT PART START ======-->
+    <!--====== CONTACT PART START ======-->
 
-        <section id="contact" class="contact-area">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-10">
-                        <div class="section-title text-center pb-30">
-                            <h3 class="title">Contact</h3>
-                        </div> <!-- section title -->
-                    </div>
-                </div> 
-               <!-- contact info -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="contact-wrapper form-style-two pt-115">
-                            <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Envoyer <span>nous un message.</span></h4>
-                            
-                            <form id="contact-form" action="assets/contact.php" method="post">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-input mt-25">
-                                            <label>Nom</label>
-                                            <div class="input-items default">
-                                                <input name="name" type="text" placeholder="Nom">
-                                                <i class="lni lni-user"></i>
-                                            </div>
-                                        </div> <!-- form input -->
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-input mt-25">
-                                            <label>Email</label>
-                                            <div class="input-items default">
-                                                <input type="email" name="email" placeholder="Email">
-                                                <i class="lni lni-envelope"></i>
-                                            </div>
-                                        </div> <!-- form input -->
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-input mt-25">
-                                            <label>Massage</label>
-                                            <div class="input-items default">
-                                                <textarea name="massage" placeholder="Message"></textarea>
-                                                <i class="lni lni-pencil-alt"></i>
-                                            </div>
-                                        </div> <!-- form input -->
-                                    </div>
-                                    <p class="form-message"></p>
-                                    <div class="col-md-12">
-                                        <div class="form-input light-rounded-buttons mt-30">
-                                            <button class="main-btn light-rounded-two">Envoyer</button>
-                                        </div> <!-- form input -->
-                                    </div>
-                                </div> <!-- row -->
-                            </form>
-                        </div> <!-- contact wrapper form -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </section>
-    
-        <!--====== CONTACT PART ENDS ======-->
-    
+    <section id="contact" class="contact-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section-title text-center pb-30">
+                        <h3 class="title">Contact</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div>
+            <!-- contact info -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-wrapper form-style-two pt-115">
+                        <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Envoyer <span>nous un
+                                message.</span></h4>
+
+                        <form id="contact-form"  method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-input mt-25">
+                                        <label>Nom</label>
+                                        <div class="input-items default">
+                                            <input name="name" id="name" type="text" placeholder="Nom">
+                                            <i class="lni lni-user"></i>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-input mt-25">
+                                        <label>Email</label>
+                                        <div class="input-items default">
+                                            <input type="email" id="email" name="email" placeholder="Email">
+                                            <i class="lni lni-envelope"></i>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-input mt-25">
+                                        <label>Massage</label>
+                                        <div class="input-items default">
+                                            <textarea name="massage" id="massage" placeholder="Message"></textarea>
+                                            <i class="lni lni-pencil-alt"></i>
+                                        </div>
+                                    </div> <!-- form input -->
+                                </div>
+                                <p class="form-message"></p>
+                                <div class="col-md-12">
+                                    <div class="form-input light-rounded-buttons mt-30">
+                                        <button class="main-btn light-rounded-two">Envoyer</button>
+                                    </div> <!-- form input -->
+                                </div>
+                            </div> <!-- row -->
+                        </form>
+                    </div> <!-- contact wrapper form -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+
     <!--====== TESTIMONIAL PART START ======-->
 
     <section id="testimonial" class="testimonial-area">
@@ -385,7 +453,8 @@
                         <div class="testimonial-content-wrapper testimonial-active">
                             <div class="single-testimonial">
                                 <div class="testimonial-text">
-                                    <p class="text">Super, <br> De belle chaussettes à motifs de haute qualité. <br> Je recomande !</p>nt top et de b
+                                    <p class="text">Super, <br> De belle chaussettes à motifs de haute qualité. <br> Je
+                                        recomande !</p>nt top et de b
                                 </div>
                                 <div class="testimonial-author d-sm-flex justify-content-between">
                                     <div class="author-info d-flex align-items-center">
@@ -416,7 +485,7 @@
                                 <div class="testimonial-author d-sm-flex justify-content-between">
                                     <div class="author-info d-flex align-items-center">
                                         <div class="author-image">
-                                                <img src="assets/images/author-2.jpg" alt="author">
+                                            <img src="assets/images/author-2.jpg" alt="author">
                                         </div>
                                         <div class="author-name media-body">
                                             <h5 class="name">SIGLER J.</h5>
@@ -442,7 +511,7 @@
                                 <div class="testimonial-author d-sm-flex justify-content-between">
                                     <div class="author-info d-flex align-items-center">
                                         <div class="author-image">
-                                                <img src="assets/images/author-3.jpg" alt="author">
+                                            <img src="assets/images/author-3.jpg" alt="author">
                                         </div>
                                         <div class="author-name media-body">
                                             <h5 class="name">BOUSTANI R.</h5>
@@ -469,9 +538,9 @@
     </section>
 
     <!--====== TESTIMONIAL PART ENDS ======-->
-    
 
-    
+
+
     <!--====== FOOTER PART START ======-->
 
     <section class="footer-area footer-dark">
@@ -482,18 +551,19 @@
                         <a class="mt-30" href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
                     </div> <!-- footer logo -->
                     <ul class="social text-center mt-60">
-                        <li><a href="https://www.facebook.com/SoxBoxAdmin"><i class="lni lni-facebook-filled"></i></a></li>
+                        <li><a href="https://www.facebook.com/SoxBoxAdmin"><i class="lni lni-facebook-filled"></i></a>
+                        </li>
                         <li><a href=""><i class="lni lni-instagram-original"></i></a></li>
-                        
+
                     </ul> <!-- social -->
                     <div class="footer-support text-center">
                         <span class="mail">sox.box@outlook.fr</span>
                     </div>
                     <div class="copyright text-center mt-35">
-                        
+
                         <A HREF="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=T75H84M6DY25A">
                             <IMG SRC="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_unsubscribe_LG.gif" BORDER="0">
-                            </A>
+                        </A>
                     </div> <!--  copyright -->
                 </div>
             </div> <!-- row -->
@@ -502,16 +572,16 @@
     </section>
 
     <!--====== FOOTER PART ENDS ======-->
-    
+
     <!--====== BACK TOP TOP PART START ======-->
 
     <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
 
-    <!--====== BACK TOP TOP PART ENDS ======-->    
+    <!--====== BACK TOP TOP PART ENDS ======-->
 
     <!--====== PART START ======-->
 
-<!--
+    <!--
     <section class="">
         <div class="container">
             <div class="row">
@@ -531,31 +601,28 @@
     <!--====== Jquery js ======-->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    
+
     <!--====== Bootstrap js ======-->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    
+
     <!--====== Slick js ======-->
     <script src="assets/js/slick.min.js"></script>
-    
+
     <!--====== Magnific Popup js ======-->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Ajax Contact js ======-->
-    <script src="assets/js/ajax-contact.js"></script>
-    
+
     <!--====== Isotope js ======-->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
-    
+
     <!--====== Scrolling Nav js ======-->
     <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/scrolling-nav.js"></script>
-    
+
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
-    
+
 </body>
 
 </html>

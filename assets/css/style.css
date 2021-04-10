@@ -3407,3 +3407,23 @@ padding-left: 2%;
 /*# sourceMappingURL=style.css.map */
 
 
+
+.premiere-phrase{ 
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+  opacity: 1;
+  text-shadow: black 2px 2px, black -2px 2px, black -2px -2px, black 2px -2px;
+  position: center;
+  transform: translateY(250px);
+    
+    
+    
+  
+}
+
+
+
+
+
