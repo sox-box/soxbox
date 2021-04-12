@@ -2522,15 +2522,6 @@ p {
     .carousel .carousel-control-next {
       right: 30px; } }
 
-.slider_area
-{
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-}
-
-
-
 /*===========================
       17.FEATURES css 
 ===========================*/
@@ -3430,21 +3421,17 @@ padding-left: 2%;
 @media screen and (max-width : 820px) {
   .premiere-phrase {
     top: 150px;
-    font-size: 30px;
+    font-size: 35px;
   }
 } 
 
 @media screen and (max-width : 660px) {
   .premiere-phrase {
     top: 100px;
-    font-size: 25px;
+    font-size: 35px;
   }
 } 
-@media screen and (max-width : 530px) {
-  .premiere-phrase {
-    top: 50px;
-  }
-} 
+
 
 
 
