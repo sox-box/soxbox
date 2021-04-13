@@ -3435,11 +3435,11 @@ padding-left: 2%;
 
 @media screen and (max-width : 660px) {
   .premiere-phrase {
-    top: 100px;
+    top: 60px;
     font-size: 30px;
   }
   .mySlides{
-    height: 500px;
+    height: 350px;
   }
 }
 
