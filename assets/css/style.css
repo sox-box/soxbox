@@ -3412,6 +3412,14 @@ padding-left: 2%;
   margin-bottom: 0%;
 }
 
+.mySlides{
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
   @media screen and (max-width : 900px) {
   .premiere-phrase {
     top: 200px;
@@ -3427,11 +3435,13 @@ padding-left: 2%;
 
 @media screen and (max-width : 660px) {
   .premiere-phrase {
-    top: 100px;
+    top: 60px;
     font-size: 35px;
   }
-} 
-
+  .mySlides{
+    height: 450px;
+  }
+}
 
 
 
