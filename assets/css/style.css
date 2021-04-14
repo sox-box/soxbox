@@ -3443,6 +3443,16 @@ padding-left: 2%;
   }
 }
 
+@media screen and (max-width : 420px) {
+  .premiere-phrase {
+    top: 20px;
+    font-size: 20px;
+  }
+  .mySlides{
+    height: auto;
+  }
+}
+
 
 
 
